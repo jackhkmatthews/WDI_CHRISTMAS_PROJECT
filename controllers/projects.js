@@ -14,7 +14,10 @@ function projectsCreate(req, res) {
 }
 
 function projectsIndex(req, res) {
-  res.render('index');
+  Project.find({}, (err, projects) => {
+    if (err) return console.log(err);
+    return res.render('index', {projects});
+  });
 }
 
 module.exports = {
