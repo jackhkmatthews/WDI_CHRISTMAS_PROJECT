@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 
 const projectSchema = new mongoose.Schema({
   titles: [{
-    main: { type: String, trim: true },
-    sub: { type: String, trim: true }
+    main: { type: String, trim: true }
   }],
   colors: [{
     topLeft: { type: String},
@@ -18,8 +17,7 @@ const projectSchema = new mongoose.Schema({
   }],
   paragraphs: [{
     intro: { type: String, trim: true },
-    main1: { type: String, trim: true },
-    main2: { type: String, trim: true },
+    main: { type: String, trim: true },
     concluding: { type: String, trim: true }
   }]
 }, {
