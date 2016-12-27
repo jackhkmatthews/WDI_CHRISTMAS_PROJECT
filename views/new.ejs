@@ -1,3 +1,58 @@
-<section>
+<section class="container">
   <h1>New</h1>
+  <form method="post" actions="/projects">
+  <div class="form-group">
+    <label for="inputTitleMain">Title</label>
+    <input type="text" class="form-control" id="inputTitleMain" placeholder="Title" name="project[titles.main]">
+  </div>
+  <div class="form-group">
+    <label for="inputTitleSub">Subtitle</label>
+    <input type="text" class="form-control" id="inputTitleSub" placeholder="Subtitle">
+  </div>
+  <div class="form-group">
+    <label for="inputColorsTopLeft">Gradient Start</label>
+    <input type="number" class="form-control" id="inputColorsTopLeft" placeholder="Gradient Start">
+  </div>
+  <div class="form-group">
+    <label for="inputColorsBottomRight">Gradient End</label>
+    <input type="number" class="form-control" id="inputColorsBottomRight" placeholder="Gradient End">
+  </div>
+  <div class="form-group">
+    <label for="creator">Creator</label>
+    <input type="text" class="form-control" id="creator" placeholder="Creator">
+  </div>
+  <div class="form-group">
+    <label for="imageUrlsBanner">Banner Image URL</label>
+    <input type="text" class="form-control" id="imageUrlsBanner" placeholder="Banner Image URL">
+  </div>
+  <div class="form-group">
+    <label for="imageUrlsIntro">Intro Image URL</label>
+    <input type="text" class="form-control" id="imageUrlsIntro" placeholder="Intro Image URL">
+  </div>
+  <div class="form-group">
+    <label for="imageUrlsMain">Main Image URL</label>
+    <input type="text" class="form-control" id="imageUrlsMain" placeholder="Main Image URL">
+  </div>
+  <div class="form-group">
+    <label for="imageUrlsConcluding">Concluding Image URL</label>
+    <input type="text" class="form-control" id="imageUrlsConcluding" placeholder="Concluding Image URL">
+  </div>
+  <div class="form-group">
+    <label for="paragraphsIntro">Intro Paragraph</label>
+    <input type="text" class="form-control" id="paragraphsIntro" placeholder="Intro Paragraph">
+  </div>
+  <div class="form-group">
+    <label for="paragraphsMain1">Main Paragraph 1</label>
+    <input type="text" class="form-control" id="paragraphsMain1" placeholder="Main Paragraph 1">
+  </div>
+  <div class="form-group">
+    <label for="paragraphsMain2">Main Paragraph 2</label>
+    <input type="text" class="form-control" id="paragraphsMain2" placeholder="Main Paragraph 2">
+  </div>
+  <div class="form-group">
+    <label for="paragraphsConcluding">Concluding Paragraph</label>
+    <input type="text" class="form-control" id="paragraphsConcluding" placeholder="Concluding Paragraph">
+  </div>
+  <button type="submit" class="btn btn-default">Create</button>
+</form>
 </section>

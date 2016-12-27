@@ -1,0 +1,29 @@
+const mongoose = require('mongoose');
+
+const projectSchema = new mongoose.Schema({
+  titles: [{
+    main: { type: String, trim: true },
+    sub: { type: String, trim: true }
+  }],
+  colors: [{
+    topLeft: { type: Number},
+    bottomRight: { type: Number}
+  }],
+  creator: { type: String, trim: true },
+  imageUrls: [{
+    banner: { type: String, trim: true },
+    intro: { type: String, trim: true },
+    main: { type: String, trim: true },
+    concluding: { type: String, trim: true }
+  }],
+  paragraphs: [{
+    intro: { type: String, trim: true },
+    main1: { type: String, trim: true },
+    main2: { type: String, trim: true },
+    concluding: { type: String, trim: true }
+  }]
+}, {
+  timestamps: true
+});
+
+module.exports = mongoose.model('Project', projectSchema);

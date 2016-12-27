@@ -3,6 +3,15 @@ const morgan = require('morgan');
 const port = process.env.PORT || 3000;
 const router = require('./config/routes');
 const ejsLayouts = require('express-ejs-layouts');
+const mongoose = require('mongoose');
+
+//database bits
+const databaseName = 'projects-app';
+const databaseUrl  = `mongodb://localhost/${databaseName}`;
+
+mongoose.connect(databaseUrl, () => {
+  return console.log(`Connected to db: ${databaseUrl}`);
+});
 
 //initialise express app
 const app = express();
@@ -14,6 +23,8 @@ app.set('view engine', 'ejs');
 //middleware
 app.use(morgan('div'));
 app.use(ejsLayouts);
+app.use(express.static('bower_components'));
+app.use(express.static('public'));
 app.use('/', router);
 
 //listening

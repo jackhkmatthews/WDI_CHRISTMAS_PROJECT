@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const projectsController = require('../controllers/projects.js');
 
 //home page
 
@@ -7,7 +8,7 @@ router.get('/', (req, res) => res.render('home'));
 
 //new
 
-router.get('/projects/new', (req, res) => res.render('new'));
+router.get('/projects/new', projectsController.new);
 
 //create
 //index
