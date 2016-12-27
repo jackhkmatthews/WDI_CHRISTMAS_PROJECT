@@ -11,7 +11,13 @@ router.get('/', (req, res) => res.render('home'));
 router.get('/projects/new', projectsController.new);
 
 //create
+
+router.post('/projects', projectsController.create);
+
 //index
+
+router.get('/projects', projectsController.index);
+
 //show
 //edit
 //update

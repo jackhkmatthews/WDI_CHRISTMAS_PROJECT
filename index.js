@@ -4,6 +4,7 @@ const port = process.env.PORT || 3000;
 const router = require('./config/routes');
 const ejsLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 //database bits
 const databaseName = 'projects-app';
@@ -25,6 +26,7 @@ app.use(morgan('div'));
 app.use(ejsLayouts);
 app.use(express.static('bower_components'));
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', router);
 
 //listening

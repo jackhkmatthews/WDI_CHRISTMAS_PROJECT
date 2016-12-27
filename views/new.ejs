@@ -1,57 +1,57 @@
 <section class="container">
   <h1>New</h1>
-  <form method="post" actions="/projects">
+  <form method="post" action="/projects">
   <div class="form-group">
     <label for="inputTitleMain">Title</label>
-    <input type="text" class="form-control" id="inputTitleMain" placeholder="Title" name="project[titles.main]">
+    <input type="text" class="form-control" id="inputTitleMain" placeholder="Title" name="project[titles][main]">
   </div>
   <div class="form-group">
     <label for="inputTitleSub">Subtitle</label>
-    <input type="text" class="form-control" id="inputTitleSub" placeholder="Subtitle">
+    <input type="text" class="form-control" id="inputTitleSub" placeholder="Subtitle" name="project[titles][sub]">
   </div>
   <div class="form-group">
     <label for="inputColorsTopLeft">Gradient Start</label>
-    <input type="number" class="form-control" id="inputColorsTopLeft" placeholder="Gradient Start">
+    <input type="number" class="form-control" id="inputColorsTopLeft" placeholder="Gradient Start" name="project[colors][topLeft]">
   </div>
   <div class="form-group">
     <label for="inputColorsBottomRight">Gradient End</label>
-    <input type="number" class="form-control" id="inputColorsBottomRight" placeholder="Gradient End">
+    <input type="number" class="form-control" id="inputColorsBottomRight" placeholder="Gradient End" name="project[colors][bottomRight]">
   </div>
   <div class="form-group">
     <label for="creator">Creator</label>
-    <input type="text" class="form-control" id="creator" placeholder="Creator">
+    <input type="text" class="form-control" id="creator" placeholder="Creator" name="project[creator]">
   </div>
   <div class="form-group">
     <label for="imageUrlsBanner">Banner Image URL</label>
-    <input type="text" class="form-control" id="imageUrlsBanner" placeholder="Banner Image URL">
+    <input type="text" class="form-control" id="imageUrlsBanner" placeholder="Banner Image URL" name="project[imageUrls][banner]">
   </div>
   <div class="form-group">
     <label for="imageUrlsIntro">Intro Image URL</label>
-    <input type="text" class="form-control" id="imageUrlsIntro" placeholder="Intro Image URL">
+    <input type="text" class="form-control" id="imageUrlsIntro" placeholder="Intro Image URL" name="project[imageUrls][intro]">
   </div>
   <div class="form-group">
     <label for="imageUrlsMain">Main Image URL</label>
-    <input type="text" class="form-control" id="imageUrlsMain" placeholder="Main Image URL">
+    <input type="text" class="form-control" id="imageUrlsMain" placeholder="Main Image URL" name="project[imageUrls][main]">
   </div>
   <div class="form-group">
     <label for="imageUrlsConcluding">Concluding Image URL</label>
-    <input type="text" class="form-control" id="imageUrlsConcluding" placeholder="Concluding Image URL">
+    <input type="text" class="form-control" id="imageUrlsConcluding" placeholder="Concluding Image URL" name="project[imageUrls][concluding]">
   </div>
   <div class="form-group">
     <label for="paragraphsIntro">Intro Paragraph</label>
-    <input type="text" class="form-control" id="paragraphsIntro" placeholder="Intro Paragraph">
+    <input type="text" class="form-control" id="paragraphsIntro" placeholder="Intro Paragraph" name="project[paragraphs][intro]">
   </div>
   <div class="form-group">
     <label for="paragraphsMain1">Main Paragraph 1</label>
-    <input type="text" class="form-control" id="paragraphsMain1" placeholder="Main Paragraph 1">
+    <input type="text" class="form-control" id="paragraphsMain1" placeholder="Main Paragraph 1" name="project[paragraphs][main1]">
   </div>
   <div class="form-group">
     <label for="paragraphsMain2">Main Paragraph 2</label>
-    <input type="text" class="form-control" id="paragraphsMain2" placeholder="Main Paragraph 2">
+    <input type="text" class="form-control" id="paragraphsMain2" placeholder="Main Paragraph 2" name="project[paragraphs][main2]">
   </div>
   <div class="form-group">
     <label for="paragraphsConcluding">Concluding Paragraph</label>
-    <input type="text" class="form-control" id="paragraphsConcluding" placeholder="Concluding Paragraph">
+    <input type="text" class="form-control" id="paragraphsConcluding" placeholder="Concluding Paragraph" name="project[paragraphs][concluding]">
   </div>
   <button type="submit" class="btn btn-default">Create</button>
 </form>
