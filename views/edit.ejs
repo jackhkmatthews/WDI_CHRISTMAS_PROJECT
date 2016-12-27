@@ -1,0 +1,59 @@
+<section class="container">
+  <h1>Edit</h1>
+  <form method="post" action="/projects/<%= project._id %>">
+    <input type="hidden" name="_method" value="put">
+    <div class="form-group">
+      <label for="inputTitleMain">Title</label>
+      <input type="text" class="form-control" id="inputTitleMain" value="<%= project.titles[0].main %> " name="project[titles][main]">
+    </div>
+    <div class="form-group">
+      <label for="inputTitleSub">Subtitle</label>
+      <input type="text" class="form-control" id="inputTitleSub" value="<%= project.titles[0].sub %>" name="project[titles][sub]">
+    </div>
+    <div class="form-group">
+      <label for="inputColorsTopLeft">Gradient Start</label>
+      <input type="text" class="form-control" id="inputColorsTopLeft" value="<%= project.colors[0].topLeft %>" name="project[colors][topLeft]">
+    </div>
+    <div class="form-group">
+      <label for="inputColorsBottomRight">Gradient End</label>
+      <input type="text" class="form-control" id="inputColorsBottomRight" value="<%= project.colors[0].bottomRight %>" name="project[colors][bottomRight]">
+    </div>
+    <div class="form-group">
+      <label for="creator">Creator</label>
+      <input type="text" class="form-control" id="creator" value="<%= project.creator %>" name="project[creator]">
+    </div>
+    <div class="form-group">
+      <label for="imageUrlsBanner">Banner Image URL</label>
+      <input type="text" class="form-control" id="imageUrlsBanner" value="<%= project.imageUrls[0].banner %>" name="project[imageUrls][banner]">
+    </div>
+    <div class="form-group">
+      <label for="imageUrlsIntro">Intro Image URL</label>
+      <input type="text" class="form-control" id="imageUrlsIntro" value="<%= project.imageUrls[0].intro %>" name="project[imageUrls][intro]">
+    </div>
+    <div class="form-group">
+      <label for="imageUrlsMain">Main Image URL</label>
+      <input type="text" class="form-control" id="imageUrlsMain" value="<%= project.imageUrls[0].main %>" name="project[imageUrls][main]">
+    </div>
+    <div class="form-group">
+      <label for="imageUrlsConcluding">Concluding Image URL</label>
+      <input type="text" class="form-control" id="imageUrlsConcluding" value="<%= project.imageUrls[0].concluding %>" name="project[imageUrls][concluding]">
+    </div>
+    <div class="form-group">
+      <label for="paragraphsIntro">Intro Paragraph</label>
+      <input type="text" class="form-control" id="paragraphsIntro" value="<%= project.paragraphs[0].intro %>" name="project[paragraphs][intro]">
+    </div>
+    <div class="form-group">
+      <label for="paragraphsMain1">Main Paragraph 1</label>
+      <input type="text" class="form-control" id="paragraphsMain1" value="<%= project.paragraphs[0].main1 %>" name="project[paragraphs][main1]">
+    </div>
+    <div class="form-group">
+      <label for="paragraphsMain2">Main Paragraph 2</label>
+      <input type="text" class="form-control" id="paragraphsMain2" value="<%= project.paragraphs[0].main2 %>" name="project[paragraphs][main2]">
+    </div>
+    <div class="form-group">
+      <label for="paragraphsConcluding">Concluding Paragraph</label>
+      <input type="text" class="form-control" id="paragraphsConcluding" value="<%= project.paragraphs[0].concluding %>" name="project[paragraphs][concluding]">
+    </div>
+    <button type="submit" class="btn btn-default">Update</button>
+  </form>
+</section>

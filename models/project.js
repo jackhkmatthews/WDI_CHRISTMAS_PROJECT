@@ -6,8 +6,8 @@ const projectSchema = new mongoose.Schema({
     sub: { type: String, trim: true }
   }],
   colors: [{
-    topLeft: { type: Number},
-    bottomRight: { type: Number}
+    topLeft: { type: String},
+    bottomRight: { type: String}
   }],
   creator: { type: String, trim: true },
   imageUrls: [{

@@ -3,24 +3,25 @@ const router = express.Router();
 const projectsController = require('../controllers/projects.js');
 
 //home page
-
 router.get('/', (req, res) => res.render('home'));
 
 //new
-
 router.get('/projects/new', projectsController.new);
 
-//create
+//create and index
+router.route('/projects')
+  .post(projectsController.create)
+  .get(projectsController.index);
 
-router.post('/projects', projectsController.create);
+//show and delete and update
+router.route('/projects/:id')
+  .get(projectsController.show)
+  .delete(projectsController.delete)
+  .put(projectsController.update);
 
-//index
-
-router.get('/projects', projectsController.index);
-
-//show
 //edit
-//update
-//delete
+router.route('/projects/:id/edit')
+  .get(projectsController.edit);
+
 
 module.exports = router;

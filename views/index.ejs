@@ -2,7 +2,7 @@
   <div class="row title-banner">
     <div class="col-sm-12">
       <div class="page-header">
-        <h1>Jack Matthews is not a creative studio for a digital-first world.</h1>
+        <h1>Projects</h1>
       </div>
     </div>
   </div>
@@ -11,8 +11,9 @@
       <div class="row">
     <% } %>
     <div class="col-xs-12 col-sm-6 project-box">
-      <a href="/projects/naughts-and-crosses" class="thumbnail pic1">
-        <div  style="height: 300px; width: 300px">
+      <a href="/projects/<%= project._id %>" class="thumbnail" style="
+      background-image: linear-gradient(to left, rgba(<%= project.colors[0].topLeft %>, 0.1), rgba(<%= project.colors[0].bottomRight %>, 0.8)), url(<%= project.imageUrls[0].banner %>);">
+        <div style="height: 300px; width: 300px">
           <h3 class="title"><%= project.titles[0].main %></h3>
           <h4><%= project.creator %></h4>
         </div>

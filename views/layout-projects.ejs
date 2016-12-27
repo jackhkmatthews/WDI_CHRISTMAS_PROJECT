@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <%- include ./partials/_head %>
+  <body>
+    <main>
+      <div class="jumbotron" style="
+      background-image: linear-gradient(to left, rgba(<%= project.colors[0].topLeft %>, 0.1), rgba(<%= project.colors[0].bottomRight %>, 0.8)), url(<%= project.imageUrls[0].banner %>);">
+        <div class="container">
+          <%- include ./partials/_header %>
+          <%- body %>
+    </main>
+    <%- include ./partials/_footer %>
+  </body>
+</html>
