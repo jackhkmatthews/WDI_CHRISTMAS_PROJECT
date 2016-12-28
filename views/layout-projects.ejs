@@ -2,20 +2,17 @@
 <html>
   <%- include ./partials/_head %>
   <body>
-    <main>
-      <div class="jumbotron" style="
-      background-image: linear-gradient(to left, rgba(<%= project.colors[0].topLeft %>, 0.1), rgba(<%= project.colors[0].bottomRight %>, 0.8)), url(<%= project.imageUrls[0].banner %>);">
-        <div class="container">
-          <header>
-            <nav>
-                <ul class="nav nav-pills">
-                  <li role="presentation"><a href="/">Communal Project Gallery</a></li>
-                  <li role="presentation"><a href="/projects">Projects</a></li>
-                  <li role="presentation"><a href="/projects/new">New</a></li>
-                </ul>
-            </nav>
-          </header>
-          <%- body %>
+    <div class="jumbotron project" style="
+    background-image: linear-gradient(to left, rgba(<%= project.colors[0].topLeft %>, 0.1), rgba(<%= project.colors[0].bottomRight %>, 0.8)), url(<%= project.imageUrls[0].banner %>);">
+      <div class="container">
+        <%- include ./partials/_header %>
+        <h1><%= project.titles[0].main %></h1>
+        <h3><%= project.creator %></h3>
+        <a href="#intro"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <main class="project">
+      <%- body %>
     </main>
     <%- include ./partials/_footer %>
   </body>

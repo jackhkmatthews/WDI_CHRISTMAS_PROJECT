@@ -1,0 +1,131 @@
+body {
+  color: #484747
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.page-header {
+    margin-top: 0;
+}
+
+.page-header h1 {
+    margin-top: 0;
+    color: #484747;
+}
+
+nav.navbar.navbar-default {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+a.navbar-brand {
+    padding-left: 0px;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #484747;
+    text-decoration: underline;
+}
+
+.navbar-default .navbar-brand {
+    color: #484747;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #484747;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    text-decoration: underline;
+    color: #484747;
+}
+
+.project-box {
+    padding: 0;
+}
+
+.project-row {
+    padding: 0px 15px;
+}
+
+.project-box a {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    color: white;
+    background-size: cover;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+a {
+    color: #484747;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {color: #484747;text-decoration: underline;background-color: rgba(0, 0, 0, 0);}
+
+a.thumbnail:hover {
+    text-decoration: none;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn-column {
+    text-align: center;
+}
+
+.jumbotron.project {
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    text-align: center;
+}
+
+.jumbotron.project h1 {
+    margin-top: 30vh;
+}
+
+.jumbotron.project .glyphicon {
+    color: white;
+    font-size: 2em;
+}
+
+.project section h1 {
+    text-align: center;
+    padding-top: 5vh;
+    line-height: 1.5em;
+}
+
+.project p.paragraph {
+    line-height: 1.5em;
+    padding: 3vh 0;
+}
+
+.image-contianer {
+    padding: 4vh 0;
+}
+
+form.delete {
+    display: inline;
+}
+
+.row.buttons {
+    text-align: center;
+}

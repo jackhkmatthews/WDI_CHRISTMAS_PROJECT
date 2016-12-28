@@ -26,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(ejsLayouts);
 app.use(express.static('bower_components'));
-app.use(express.static('public'));
+app.use(express.static('src'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride(function (req) {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {

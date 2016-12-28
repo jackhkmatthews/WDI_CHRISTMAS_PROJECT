@@ -2,13 +2,13 @@
   <div class="row title-banner">
     <div class="col-sm-12">
       <div class="page-header">
-        <h1>Projects</h1>
+        <h1>Browse all projects below and click for more information.</h1>
       </div>
     </div>
   </div>
   <% projects.forEach(function(project, i, projects){ %>
     <% if (i === 0 || i % 2 === 0) { %>
-      <div class="row">
+      <div class="row project-row">
     <% } %>
     <div class="col-xs-12 col-sm-6 project-box">
       <a href="/projects/<%= project._id %>" class="thumbnail" style="

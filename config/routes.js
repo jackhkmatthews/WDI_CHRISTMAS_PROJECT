@@ -3,7 +3,7 @@ const router = express.Router();
 const projectsController = require('../controllers/projects.js');
 
 //home page
-router.get('/', (req, res) => res.render('home'));
+router.get('/', projectsController.home);
 
 //new
 router.get('/projects/new', projectsController.new);

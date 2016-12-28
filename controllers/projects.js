@@ -1,5 +1,12 @@
 const Project = require('../models/project.js');
 
+function projectsHome(req, res) {
+  Project.find({}, (err, projects) => {
+    if (err) return console.log(err);
+    return res.render('home', {projects});
+  });
+}
+
 function projectsNew(req, res) {
   res.render('new');
 }
@@ -66,6 +73,7 @@ function projectsUpdate(req, res) {
 }
 
 module.exports = {
+  home: projectsHome,
   new: projectsNew,
   create: projectsCreate,
   index: projectsIndex,

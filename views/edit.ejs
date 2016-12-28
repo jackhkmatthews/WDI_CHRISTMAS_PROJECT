@@ -1,5 +1,11 @@
 <section class="container">
-  <h1>Edit</h1>
+  <div class="row title-banner">
+    <div class="col-sm-12">
+      <div class="page-header">
+        <h1><%= project.creator %>'s project, "<%= project.titles[0].main %>", can be edited and updated below.</h1>
+      </div>
+    </div>
+  </div>
   <form method="post" action="/projects/<%= project._id %>">
     <input type="hidden" name="_method" value="put">
     <div class="form-group form-group form-group col-sm-10 col-sm-offset-1">
