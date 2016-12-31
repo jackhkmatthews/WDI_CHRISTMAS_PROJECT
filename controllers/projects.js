@@ -49,7 +49,6 @@ function projectsShow(req, res) {
   });
 }
 
-
 function projectsDelete(req, res) {
   const id = req.params.id;
   Project.findByIdAndRemove(id, (err) => {
