@@ -8,7 +8,7 @@ const projectSchema = new mongoose.Schema({
     topLeft: { type: String},
     bottomRight: { type: String}
   }],
-  creator: { type: String, trim: true },
+  creator: { type: mongoose.Schema.ObjectId, ref: 'Creator' },
   imageUrls: [{
     banner: { type: String, trim: true },
     intro: { type: String, trim: true },

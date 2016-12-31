@@ -1,14 +1,21 @@
 const Project = require('../models/project.js');
+const Creator = require('../models/creator.js');
 
 function projectsHome(req, res) {
-  Project.find({}, (err, projects) => {
+  Project
+  .find({})
+  .populate(['creator'])
+  .exec((err, projects) => {
     if (err) return console.log(err);
     return res.render('home', {projects});
   });
 }
 
 function projectsNew(req, res) {
-  res.render('new');
+  Creator.find({}, (err, creators) => {
+    if (err) return console.log(err);
+    return res.render('projects/new', {error: null, creators });
+  });
 }
 
 function projectsCreate(req, res) {
@@ -21,19 +28,27 @@ function projectsCreate(req, res) {
 }
 
 function projectsIndex(req, res) {
-  Project.find({}, (err, projects) => {
+  Project
+  .find({})
+  .populate(['creator'])
+  .exec((err, projects) => {
     if (err) return console.log(err);
-    return res.render('index', {projects});
+    return res.render('projects/index', {projects});
   });
 }
 
 function projectsShow(req, res) {
   const id = req.params.id;
-  Project.findById(id, (err, project) => {
+  Project
+  .findById(id)
+  .populate(['creator'])
+  .exec((err, project) => {
     if (err) return console.log(err);
-    return res.render('show', {project: project, layout: 'layout-projects'});
+    console.log(project);
+    return res.render('projects/show', { project: project, layout: 'projects/layout-projects' });
   });
 }
+
 
 function projectsDelete(req, res) {
   const id = req.params.id;
@@ -45,10 +60,15 @@ function projectsDelete(req, res) {
 
 function projectsEdit(req, res) {
   const id = req.params.id;
-  Project.findById(id, (err, project) => {
+  Project
+  .findById(id)
+  .populate(['creator'])
+  .exec((err, project) => {
     if (err) return console.log(err);
-    console.log(project);
-    return res.render('edit', {project});
+    Creator.find({}, (err, creators) => {
+      if (err) console.log(err);
+      return res.render('projects/edit', { project, creators });
+    });
   });
 }
 

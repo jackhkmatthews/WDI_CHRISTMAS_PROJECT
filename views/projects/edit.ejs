@@ -2,7 +2,7 @@
   <div class="row title-banner">
     <div class="col-sm-12">
       <div class="page-header">
-        <h1><%= project.creator %>'s project, "<%= project.titles[0].main %>", can be edited and updated below.</h1>
+        <h1><%= project.creator.name %>'s project, "<%= project.titles[0].main %>", can be edited and updated below.</h1>
       </div>
     </div>
   </div>
@@ -12,7 +12,12 @@
       <input type="text" class="form-control" id="inputTitleMain" value="<%= project.titles[0].main %>" name="project[titles][main]">
     </div>
     <div class="form-group col-sm-10 col-sm-offset-1">
-      <input type="text" class="form-control" id="creator" value="<%= project.creator %>" name="project[creator]">
+      <label for="project_creator">Creator</label>
+      <select class="form-control" id="project-creator" name="project[creator]">
+        <% creators.forEach(creator => { %>
+          <option value="<%= creator._id %>"><%= creator.name %></option>
+        <% }) %>
+      </select>
     </div>
     <div class="form-group col-sm-10 col-sm-offset-1">
       <div class="form-group col-sm-4">

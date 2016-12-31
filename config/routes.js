@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const projectsController = require('../controllers/projects.js');
+const creatorsController = require('../controllers/creators.js');
+
+//project routes
 
 //home page
 router.get('/', projectsController.home);
@@ -23,5 +26,23 @@ router.route('/projects/:id')
 router.route('/projects/:id/edit')
   .get(projectsController.edit);
 
+//creator routes
+//new
+router.get('/creators/new', creatorsController.new);
+
+//create and index
+router.route('/creators')
+  .post(creatorsController.create)
+  .get(creatorsController.index);
+
+//show and delete and update
+router.route('/creators/:id')
+  .get(creatorsController.show)
+  .delete(creatorsController.delete)
+  .put(creatorsController.update);
+
+//edit
+router.route('/creators/:id/edit')
+  .get(creatorsController.edit);
 
 module.exports = router;
