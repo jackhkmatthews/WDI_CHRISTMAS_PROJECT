@@ -7,7 +7,7 @@
       <div class="container">
         <%- include ../partials/_header %>
         <h1><%= project.titles[0].main %></h1>
-        <h3><%= project.creator.name %></h3>
+        <h3><a href="/creators/<%= project.creator._id %>" style="color: white"><%= project.creator.name %></a></h3>
         <a href="#intro"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
       </div>
     </div>

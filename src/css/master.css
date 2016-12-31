@@ -135,3 +135,7 @@ form.delete {
 a.selected {
   text-decoration: underline;
 }
+
+.row.buttons.creator {
+    padding-top: 30px;
+}

@@ -1,4 +1,5 @@
 const Creator = require('../models/creator.js');
+const Project = require('../models/project.js');
 
 function creatorsNew(req, res) {
   res.render('creators/new');
@@ -24,7 +25,11 @@ function creatorsShow(req, res) {
   const id = req.params.id;
   Creator.findById(id, (err, creator) => {
     if (err) return console.log(err);
-    return res.render('creators/show', {creator: creator, layout: 'creators/layout-creators'});
+    Project.find({'creator': id}, (err, projects) => {
+      if (err) return console.log(err);
+      console.log(projects);
+      return res.render('creators/show', {creator: creator, projects: projects, layout: 'layout'});
+    });
   });
 }
 
