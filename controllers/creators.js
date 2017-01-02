@@ -10,7 +10,7 @@ function creatorsCreate(req, res) {
   const creator = new Creator(req.body.creator);
   creator.save((err, creator) => {
     if(err) return console.log(err);
-    return res.redirect('/creators');
+    return res.redirect('/projects/new');
   });
 }
 
