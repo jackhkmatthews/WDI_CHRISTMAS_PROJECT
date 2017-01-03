@@ -5,11 +5,11 @@ const router = require('./config/routes');
 const ejsLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-var methodOverride = require('method-override');
+const methodOverride = require('method-override');
 
 //database bits
 const databaseName = 'projects-app';
-const databaseUrl  = `mongodb://localhost/${databaseName}`;
+const databaseUrl  = process.env.MONGODB_URI || `mongodb://localhost/${databaseName}`;
 
 mongoose.connect(databaseUrl, () => {
   return console.log(`Connected to db: ${databaseUrl}`);
